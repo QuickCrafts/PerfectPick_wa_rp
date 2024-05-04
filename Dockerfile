@@ -7,6 +7,6 @@ RUN mkdir log
 COPY app.conf /tmp/app.nginx
 RUN envsubst '$NODE_ROOT' < /tmp/app.nginx > /etc/nginx/conf.d/default.conf
 
-EXPOSE 77
+EXPOSE 24
 
 CMD [ "nginx", "-g", "daemon off;" ]
