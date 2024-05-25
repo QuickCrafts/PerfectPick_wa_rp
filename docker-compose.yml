@@ -1,0 +1,16 @@
+
+
+services:
+  perfectpick_wa_rp:
+    build:
+      context: ./perfectpick_wa_rp  
+    container_name: perfectpick_wa_rp
+    networks:
+      - perfectpicknetwork
+    ports:
+      - "443:443"  
+    restart: unless-stopped
+
+networks:
+  perfectpicknetwork:
+    external: true
